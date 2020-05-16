@@ -1,19 +1,3 @@
-#
-# Copyright (C) 2017 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -21,8 +5,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common PixelExperience stuff.
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
@@ -33,24 +19,11 @@ PRODUCT_MODEL := Mi A2 Lite
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 
+BUILD_FINGERPRINT := "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys"
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="daisy" \
-    PRODUCT_NAME="daisy_sprout"
-
-# Use Gcam and Jelly
-TARGET_USE_GCAM := false
-TARGET_USE_JELLY := true
-
-TARGET_BOOT_ANIMATION_RES := 2280
-
-# Set this flag in build script
-ifeq ($(CURRENT_BUILD_TYPE), gapps)
-# Use Gapps
-  TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
-  WITH_GAPPS := true
-  TARGET_GAPPS_ARCH := arm64
-  IS_PHONE := true
-  TARGET_INCLUDE_WIFI_EXT := true
-endif
+    PRIVATE_BUILD_DESC="dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys" \
+    PRODUCT_NAME="daisy" \
+    TARGET_DEVICE="daisy_sprout"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
