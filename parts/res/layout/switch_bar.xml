@@ -35,7 +35,7 @@
         android:ellipsize="end"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"
         android:textColor="?android:attr/textColorPrimaryInverse"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textAlignment="viewStart" />
 
     <Switch
