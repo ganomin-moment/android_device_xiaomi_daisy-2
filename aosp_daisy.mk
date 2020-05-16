@@ -19,10 +19,10 @@ PRODUCT_MODEL := Mi A2 Lite
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 
-BUILD_FINGERPRINT := "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys"
+BUILD_FINGERPRINT := "Xiaomi/aosp_daisy/daisy:10/QQ2A.200405.005/421454e9fa:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys" \
+    PRIVATE_BUILD_DESC="daisy-user 9 PKQ1.180917.001 V10.0.18.0.PDLMIXM release-keys" \
     PRODUCT_NAME="daisy" \
     TARGET_DEVICE="daisy_sprout"
 
