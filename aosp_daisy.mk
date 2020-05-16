@@ -22,7 +22,7 @@ TARGET_VENDOR := Xiaomi
 BUILD_FINGERPRINT := "Xiaomi/aosp_daisy/daisy:10/QQ2A.200405.005/421454e9fa:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="daisy-user 9 PKQ1.180917.001 V10.0.18.0.PDLMIXM release-keys" \
+    PRIVATE_BUILD_DESC="daisy-user 10 QKQ 1191002002 V11.0.4.0.QDLMIXMrelease-keys" \
     PRODUCT_NAME="daisy" \
     TARGET_DEVICE="daisy_sprout"
 
