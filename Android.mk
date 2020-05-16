@@ -17,7 +17,6 @@
 ifeq ($(TARGET_DEVICE),daisy)
 
 include $(call all-subdir-makefiles)
-
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := wifi_symlinks
