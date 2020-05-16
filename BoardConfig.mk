@@ -38,6 +38,8 @@ BUILD_BROKEN_PHONY_TARGETS := true
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
+TARGET_GAPPS_ARCH := arm64
+
 # Build
 BUILD_BROKEN_DUP_RULES := true
 
@@ -202,7 +204,7 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2020-01-01
+VENDOR_SECURITY_PATCH := 2020-05-15
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
@@ -218,7 +220,7 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
 # We modify several neverallows, so let the build proceed
-# SELINUX_IGNORE_NEVERALLOWS := true
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true

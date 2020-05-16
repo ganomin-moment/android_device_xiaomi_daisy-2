@@ -93,6 +93,14 @@ vendor.camera.lowpower.record.enable=1 \
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.huaqin.factory,org.lineageos.snap \
 vendor.camera.aux.packagelist2=com.android.systemui,com.huaqin.cameraautotest,com.huaqin.runtime \
 vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk,com.whatsapp,com.android.camera2 \
+# Test
+persist.camera.privapp.list=org.codeaurora.snapcam
+persist.vendor.camera.dual.isp.sync=0
+persist.vendor.camera.HAL3.enabled=1
+persist.vendor.camera.exif.make=Xiaomi
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.android.camera2
+vendor.camera.aux.packageblacklist=com.discord
+vendor.camera.aux.packagelist=com.google.android.GoogleCamera,org.codeaurora.snapcam,com.android.camera
 
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -142,7 +150,10 @@ sdm.debug.disable_skip_validate=1 \
 vendor.display.enable_default_color_mode=1 \
 vendor.display.disable_skip_validate=1 \
 vendor.gralloc.enable_fb_ubwc=1 \
-persist.vendor.max.brightness=475
+persist.vendor.max.brightness=500 \
+
+# Test
+debug.hwui.renderer=skiavk
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -361,3 +372,9 @@ sys.vendor.shutdown.waittime=500 \
 vendor.audio.dolby.ds2.enabled=false \
 vendor.audio.dolby.ds2.hardbypass=false \
 vendor.audio.offload.passthrough=false
+
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.am.reschedule_service=true \
+    ro.vendor.qti.sys.fw.bservice_enable=true \
+    ro.config.avoid_gfx_accel=true

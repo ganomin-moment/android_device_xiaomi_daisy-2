@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common Pe stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
@@ -41,7 +41,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 TARGET_USE_GCAM := false
 TARGET_USE_JELLY := true
 
-TARGET_BOOT_ANIMATION_RES := 2280
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Set this flag in build script
 ifeq ($(CURRENT_BUILD_TYPE), gapps)
