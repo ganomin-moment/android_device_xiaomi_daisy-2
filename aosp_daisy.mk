@@ -5,10 +5,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
-# Inherit some common PixelExperience stuff.
-TARGET_GAPPS_ARCH := arm64
-TARGET_BOOT_ANIMATION_RES := 1080
+# Inherit some common EvolutionX stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Other EvolutionX releated stuff
+CUSTOM_BUILD_TYPE := UNOFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
+#TARGET_INCLUDE_WIFI_EXT := true
+
+# GApps stuff
+#TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_GAPPS_ARCH := arm64
+#TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+# Maintainer stuff
+EVO_DONATE_URL := https://paypal.me/ganomin
+EVO_MAINTAINER := ganomin🇵🇱
+EVO_SUPPORT_URL := https://t.me/EvolutionXDaisy
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
