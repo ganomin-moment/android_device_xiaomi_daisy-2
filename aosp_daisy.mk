@@ -32,12 +32,14 @@ PRODUCT_MODEL := Mi A2 Lite
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 
-BUILD_FINGERPRINT := "Xiaomi/aosp_daisy/daisy:10/QQ2A.200405.005/421454e9fa:user/release-keys"
-
+# Set Device Fingerprint to Coral to pass SafetyNet
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="daisy-user 10 QKQ 1191002002 V11.0.4.0.QDLMIXMrelease-keys" \
-    PRODUCT_NAME="daisy" \
-    TARGET_DEVICE="daisy_sprout"
+    PRIVATE_BUILD_DESC="coral-user 10 QQ2A.200501.001.B2 6352890 release-keys"
+
+BUILD_FINGERPRINT := "google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys"
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

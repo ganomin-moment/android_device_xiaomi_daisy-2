@@ -58,6 +58,6 @@ void property_override_dual(char const system_prop[], char const vendor_prop[],
 void vendor_load_properties()
 {
     // fingerprint
-    property_override("ro.build.description", "daisy-user 10 QKQ 1191002002 V11.0.4.0.QDLMIXMrelease-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "Xiaomi/aosp_daisy/daisy:10/QQ2A.200405.005/421454e9fa:user/release-keys");
+    property_override("ro.build.description", "coral-user 10 QQ2A.200501.001.B2 6352890 release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys")
 }
