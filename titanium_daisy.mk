@@ -5,27 +5,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
-# Inherit some common EvolutionX stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common ProjectTitanium stuff.
+$(call inherit-product, vendor/titanium/config/common.mk)
 
-# Other EvolutionX releated stuff
-CUSTOM_BUILD_TYPE := UNOFFICIAL
+# Other ProjectTitanium releated stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-#TARGET_INCLUDE_WIFI_EXT := true
+DISABLE_DEFAULT_CAMERA := false
+IS_PHONE := true
 
 # GApps stuff
-#TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
-#TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_MINIMAL_GAPPS := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
-# Maintainer stuff
-EVO_DONATE_URL := https://paypal.me/ganomin
-EVO_MAINTAINER := ganomin🇵🇱
-EVO_SUPPORT_URL := https://t.me/EvolutionXDaisy
+# Ti Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ti.maintainer.name=ganomin🇵🇱
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
-PRODUCT_NAME := aosp_daisy
+PRODUCT_NAME := titanium_daisy
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A2 Lite
