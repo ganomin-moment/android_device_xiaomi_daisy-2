@@ -14,6 +14,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 # GApps stuff
 CURRENT_BUILD_TYPE := gapps
+TARGET_GAPPS_ARCH := arm64
 
 # Maintainer stuff
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -21,7 +22,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
-PRODUCT_NAME := aosp_daisy
+PRODUCT_NAME := komodo_daisy
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A2 Lite
@@ -38,4 +39,3 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
